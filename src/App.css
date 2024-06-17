@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  /* color: white; */
+}
+
+tbody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+  width: 20rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 12px;
+  gap: 0.5rem;
+  background: linear-gradient(
+    315deg,
+    #077ce949 3%,
+    #76e0fa7e 38%,
+    #1fcbff7c 68%,
+    #008cff77 98%
+  );
+}
+
+td {
+  display: flex;
+  justify-content: center;
+}
+
+.img-candidates {
+  float: left;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+body {
+  background-color: black;
+}
