@@ -1,29 +1,30 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
+
 function Candidate({ candidates }) {
+  const [count, setCount] = useState(0);
+
+  function nbLike() {
+    setCount(count + 1);
+  }
+
   return (
-    <tbody>
-      {" "}
-      {/*Corp de la table*/}
-      {candidates.map((candidate, index /*Boucle pour chaque candidat*/) => (
-        <tr key={index}>
-          {" "}
-          {/*Ligne pour chaque candidat*/}
-          <div className="container">
-            <td>{candidate.name}</td> {/*Pour les noms*/}
-            <td>
-              <img
-                src={candidate.image}
-                alt={candidate.name}
-                className="img-candidates"
-              />
-            </td>{" "}
-            {/*Pour l'image avec le alt*/}
-            <td>{candidate.age}</td> {/*Pour l'âge*/}
-            <td>{candidate.city}</td> {/*Pour la ville*/}
-          </div>
-        </tr>
-      ))}
-    </tbody>
+    
+      <section className="container">
+        <article>{candidates.name}</article> {/*Pour les noms*/}
+        <article>
+          <img
+            src={candidates.image}
+            alt={candidates.name}
+            className="img-candidates"
+          />
+        </article>
+        <p>{candidates.age}</p>
+        <p>{candidates.city}</p>
+        <button onClick={nbLike}>💖</button>
+        <span>{count}</span>
+      </section>
+  
   );
 }
 

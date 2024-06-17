@@ -1,3 +1,7 @@
+:root {
+  --backg: url(../images/);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,18 +9,29 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   list-style: none;
   text-decoration: none;
-  /* color: white; */
+  color: white;
 }
 
-tbody {
+body {
+  background-color: black;
+}
+
+.Img-castle {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .container {
-  width: 20rem;
-  height: 30rem;
+  width: 10rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,18 +48,23 @@ tbody {
   );
 }
 
-td {
+article {
   display: flex;
   justify-content: center;
 }
 
 .img-candidates {
   float: left;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
 }
 
-body {
-  background-color: black;
+h1 {
+  text-align: center;
+}
+
+.Presenter {
+  margin-left: 2rem;
+  margin-top: 12rem;
 }
