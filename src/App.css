@@ -1,7 +1,3 @@
-:root {
-  --backg: url(../images/);
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -11,18 +7,44 @@
   text-decoration: none;
   color: white;
 }
-
-body {
-  background-color: black;
+/*Header*/
+.header {
+  height: 500px;
+  display: block;
+  top: 0;
+  position: relative;
 }
 
-.Img-castle {
+.header > .imgCastle {
   width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+  -webkit-box-shadow: 11px 11px 10px 10px #000000;
+  box-shadow: 11px 11px 10px 10px #00000069,
+  0 0 100px 20px rgba(248, 53, 86, 0.808), 
+  0 0 140px 20px rgba(253, 239, 47, 0.699) ;
 }
 
+.header > .logo {
+  z-index: 1;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.2);
+}
+
+/*Fin header*/
+body {
+  background-image: url("./src/assets/img/Skystar.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*Candidates*/
 main {
   display: flex;
   flex-wrap: wrap;
@@ -59,12 +81,28 @@ article {
   height: 150px;
   object-fit: cover;
 }
+/*Fin candidates*/
 
-h1 {
-  text-align: center;
+.video-container {
+  margin: 6rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
 }
+footer {
+  text-align: center;
+  box-shadow: inset 0 10px 10px 5px #0000002a,
+    11px -11px 10px 10px #00000069;
+  
+  background: linear-gradient(
+    315deg,
+    #e9070759 3%,
+    #fac1767e 38%,
+    #ff1fbc7c 68%,
+    #e5ff0077 98%
+  );
+  margin: 3rem 0 0 0;
+  width: 100%;
+  height: 5rem;
+  padding: 1.5rem;
 
-.Presenter {
-  margin-left: 2rem;
-  margin-top: 12rem;
 }

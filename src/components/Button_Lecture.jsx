@@ -1,39 +1,28 @@
-function Button_Lecture () {
+/* eslint-disable react/prop-types */
 
-//     const play = () => {
-//         const vidYoutube = "https://www.youtube.com/watch?v=MVHWJ9PDj6c";
-//         window.open(vidYoutube, `_blank`);
-//     };
+import { useRef, useState } from "react";
 
+function Button_Lecture({ videoSrc }) {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
+  const autoPlay = () => {
+    if (isPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
-// return (
-//     <>
-//         <button onClick={play}>
-//         LECTURE
-//         </button>
-//     </>
-    
-    
-// )
-
-// }
-
-// export default Button_Lecture
-
-
-
-
-
-const Button_Lecture = () => {
-    return (
-        <div>
-            <video width="600" controls autoPlay>
-                <source src="./assets/sons/clip.mp4" type="video/mp4" />
-            </video>
-        </div>
-    );
-};
+  return (
+    <div className="video-container">
+      <video ref={videoRef} width="600" height="400" controls>
+        <source src={videoSrc} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
 }
 
 export default Button_Lecture;

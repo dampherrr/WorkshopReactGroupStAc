@@ -110,25 +110,25 @@ const candidates = [
 function App() {
   return (
     <>
-      <Header />
-      <h1>STAR AC S01</h1>
-      <img src="./src/assets/img/logo.png" alt="Logo Star Academy" />
+      <body>
+        <Header />
+        <div className="clip">
+          <Button_Lecture videoSrc="../src/assets/sons/generique.mp4" />
+         
+        </div>
 
-      <div className="background-video">
-        <BackgroundVideo />
-        <p>TEST</p>
-      </div>
+        <main>
+          {candidates.map(
+            (candidate, index /*Boucle pour chaque candidat*/) => (
+              <Candidate candidates={candidate} key={index} />
+            )
+          )}
+        </main>
+      </body>
+      <footer>
+        Presented by Aïssatou, Damien, Daniel, David, Geoffrey & Guillaume
+      </footer>
 
-      <div className="clip">
-        <Button_Lecture />
-        <p>bouton</p>
-      </div>
-
-      <main>
-        {candidates.map((candidate, index /*Boucle pour chaque candidat*/) => (
-          <Candidate candidates={candidate} key={index} />
-        ))}
-      </main>
     </>
   );
 }
